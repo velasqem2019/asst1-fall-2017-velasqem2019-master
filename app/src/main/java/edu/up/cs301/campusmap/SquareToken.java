@@ -20,7 +20,7 @@ public class SquareToken extends SimpleMapToken {
      * @param canvas the canvas on which to draw
      */
     public void drawOn(Canvas canvas) {
-        // paint the dot on the canvas
-        canvas.drawRect(15,15, x, y, paint);
+        // paint the square on the canvas
+        canvas.drawRect(x,y, x+30, y+30, paint);
     }//drawOn
 }
