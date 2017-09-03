@@ -13,7 +13,7 @@ import java.util.Random;
  *
  * @author Andrew M. Nuxoll
  * @author Steven R. Vegdahl
- * @author <your name here>
+ * @author Emily Velasquez
  * @version August 2017
  */
 public class SimpleMapToken {
@@ -39,7 +39,8 @@ public class SimpleMapToken {
         int redVal = rand.nextInt(254)+1; // asigns random number to Red value
         int greenVal = rand.nextInt(254)+1; // asigns random number to green value
         int blueVal = rand.nextInt(254)+1; // asigns random number to blue value
-        paint.setColor(redVal, greenVal, blueVal); // paint object uses random RGB value to paint
+        int ranRGB = Color.rgb(redVal,greenVal,blueVal); // creates a color of a random RGB value
+        paint.setColor(ranRGB); // paint object uses random RGB value to paint
     }//ctor
 
     /**
