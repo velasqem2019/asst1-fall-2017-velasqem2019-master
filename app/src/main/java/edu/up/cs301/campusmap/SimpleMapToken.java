@@ -4,6 +4,7 @@ package edu.up.cs301.campusmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import java.util.Random;
 
 /**
  * <!-- class SimpleMapToken -->
@@ -33,8 +34,12 @@ public class SimpleMapToken {
         x = xCoord; // x-coordinate
         y = yCoord; // y-coordinate
         radius = 15; // radius of the circle
-        paint = new Paint(); // paint object, which paints ...
-        paint.setColor(Color.BLACK); // ... black
+        paint = new Paint(); // paint object,
+        Random rand = new Random(); // random number generator, to asign random numbers to RGB values
+        int redVal = rand.nextInt(254)+1; // asigns random number to Red value
+        int greenVal = rand.nextInt(254)+1; // asigns random number to green value
+        int blueVal = rand.nextInt(254)+1; // asigns random number to blue value
+        paint.setColor(redVal, greenVal, blueVal); // paint object uses random RGB value to paint
     }//ctor
 
     /**
